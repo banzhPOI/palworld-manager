@@ -1,0 +1,24 @@
+[Unit]
+Description=Palworld lightweight configuration manager
+After=network-online.target docker.service
+Wants=network-online.target
+Requires=docker.service
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/opt/palworld-manager
+Environment=PYTHONUNBUFFERED=1
+Environment=TZ=Asia/Shanghai
+Environment=PALWORLD_ROOT=/opt/palworld
+Environment=PALWORLD_MANAGER_DATA=/opt/palworld-manager
+EnvironmentFile=-/etc/default/palworld-manager
+ExecStart=/usr/bin/python3 /opt/palworld-manager/palworld_manager.py
+Restart=on-failure
+RestartSec=3
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectHome=true
+
+[Install]
+WantedBy=multi-user.target
