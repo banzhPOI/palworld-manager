@@ -39,7 +39,7 @@ Compose 服务名默认为 `palworld-server`。不同路径和服务名可通过
 ```bash
 git clone https://github.com/banzhPOI/palworld-manager.git
 cd palworld-manager
-sudo ./install.sh
+sudo bash ./install.sh
 ```
 
 安装完成后访问：
@@ -129,7 +129,7 @@ services:
 ```bash
 cd palworld-manager
 git pull
-sudo ./install.sh
+sudo bash ./install.sh
 ```
 
 `data/`、配置备份和成员档案不会被安装脚本覆盖。
