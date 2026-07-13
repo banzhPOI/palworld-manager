@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+.DS_Store
+.idea/
+.vscode/
+data/
+settings.json
+members.json
+backups/
+*.zip
+*.sav
+*.sav.json
+*.env
